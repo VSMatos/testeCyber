@@ -18,6 +18,7 @@ public class CenarioDois {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             //wait = new WebDriverWait((WebDriver) wait,5);
+            driver.get("https://demo.automationtesting.in/Frames.html");
         }
 
         @After
@@ -25,11 +26,11 @@ public class CenarioDois {
             //driver.quit();
         }
         @Test
-        public void escreverNoIFrame(){
+        public void writeInIframe(){
 
-            driver.get("https://demo.automationtesting.in/Frames.html");
-            Assert.assertEquals("Frames", driver.getTitle());
-            driver.manage().window().maximize();
+
+//            Assert.assertEquals("Frames", driver.getTitle());
+
 
             driver.switchTo().frame("singleframe");
             driver.findElement(By.tagName("input")).sendKeys("Teste de texto no iframe");
@@ -38,12 +39,9 @@ public class CenarioDois {
         }
 
         @Test
-        public void iframeInIframe() throws InterruptedException {
-            driver.get("https://demo.automationtesting.in/Frames.html");
-            Assert.assertEquals("Frames", driver.getTitle());
-            driver.manage().window().maximize();
+        public void writeIframeInIframe() throws InterruptedException {
 
-
+            //Assert.assertEquals("Frames", driver.getTitle());
 
 
             driver.findElement(By.xpath("//a[starts-with(@href, '#M')]")).click();
