@@ -1,16 +1,13 @@
 package pages;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 
-public class RegisterPage {
 
-    private DSL dsl;
-    public RegisterPage(WebDriver driver){
-        dsl = new DSL(driver);
+public class RegisterPage extends BasePage {
+
+    public void openURL(){
+        dsl.getURL("https://demo.automationtesting.in/Register.html");
     }
-
 
 
     public void setName(){ //DEFAULT

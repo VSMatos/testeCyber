@@ -3,28 +3,18 @@ package testes;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.RegisterPage;
 
 
 public class RegisterTest {
 
 
-    public WebDriver driver;
     private RegisterPage page;
 
     @Before
     public void setupAll() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        page = new RegisterPage(driver);
-
-        driver.get("https://demo.automationtesting.in/Register.html");
-        driver.manage().window().setSize(new Dimension(1381, 742));
-
+        page = new RegisterPage();
+        page.openURL();
     }
 
 
@@ -57,5 +47,6 @@ public class RegisterTest {
         page.setPassword("firstpassword", "Abc123");
         page.setPassword("secondpassword", "Abc123");
         page.submit();
+        //impossivel validar devido a compo pais que esta quebrado;
     }
 }

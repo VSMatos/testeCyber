@@ -2,6 +2,7 @@ package testes;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -16,9 +17,8 @@ public class FrameTest {
 
         @Before
         public void setupAll() {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            page = new FramePage(driver);
+
+            page = new FramePage();
             driver.get("https://demo.automationtesting.in/Frames.html");
         }
 

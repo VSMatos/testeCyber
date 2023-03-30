@@ -13,7 +13,9 @@ public class DSL {
         this.driver = driver;
     }
 
-
+    public void getURL(String url){
+        driver.get(url);
+    }
     public void write(By by, String text){
         driver.findElement(by).sendKeys(text);
     }
