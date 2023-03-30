@@ -1,10 +1,12 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CenarioDoisPage {
+public class FramePage {
     private DSL dsl;
 
-    public CenarioDoisPage(WebDriver driver) { dsl = new DSL(driver);}
+    public FramePage(WebDriver driver) { dsl = new DSL(driver);}
 
 
 

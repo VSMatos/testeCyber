@@ -1,12 +1,13 @@
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class CenarioUmPage {
+public class RegisterPage {
 
     private DSL dsl;
-    public CenarioUmPage(WebDriver driver){
+    public RegisterPage(WebDriver driver){
         dsl = new DSL(driver);
     }
 

@@ -1,4 +1,4 @@
-
+package testes;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,21 +7,20 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.RegisterPage;
 
 
-
-
-public class CenarioUm {
+public class RegisterTest {
 
 
     public WebDriver driver;
-    private CenarioUmPage page;
+    private RegisterPage page;
 
     @Before
     public void setupAll() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        page = new CenarioUmPage(driver);
+        page = new RegisterPage(driver);
 
         driver.get("https://demo.automationtesting.in/Register.html");
         driver.manage().window().setSize(new Dimension(1381, 742));

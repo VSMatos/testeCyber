@@ -1,21 +1,24 @@
+package testes;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.FramePage;
 
-public class CenarioDois {
+public class FrameTest {
 
 
         public WebDriver driver;
-        private CenarioDoisPage page;
+        private FramePage page;
 
         @Before
         public void setupAll() {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            page = new CenarioDoisPage(driver);
+            page = new FramePage(driver);
             driver.get("https://demo.automationtesting.in/Frames.html");
         }
 
