@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 
@@ -14,6 +15,8 @@ public class DSL {
     public void write(By by, String text){
         driver.findElement(by).sendKeys(text);
     }
+
+
 
     public void click(By by){
         driver.findElement(by).click();
@@ -31,14 +34,22 @@ public class DSL {
     }
 
 
-
-
     public void findInListAndClick(By by, By el){
         driver.findElement(by).findElement(el).click();
     }
 
-
-
+    public void switchToFrame(WebElement webElement) {
+        driver.switchTo().frame(webElement);
+    }
+    public WebElement findElement(By by){
+        return driver.findElement(by);
+    }
+    public void switchToFrame(String frame){
+        driver.switchTo().frame(frame);
+    }
+    public void switchToFrame(int frame){
+        driver.switchTo().frame(frame);
+    }
 
 
 
@@ -48,6 +59,7 @@ public class DSL {
     public String getTextFieldValue(By by){
         return driver.findElement(by).getAttribute("value");
     }
+
 
 
 }

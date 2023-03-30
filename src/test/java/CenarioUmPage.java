@@ -1,7 +1,7 @@
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
+
 
 public class CenarioUmPage {
 
@@ -43,9 +43,9 @@ public class CenarioUmPage {
     }
 
     public void setGender(String sexo){
-        if (sexo == "masculino") {
+        if (sexo.equals("masculino")) {
             dsl.radioClick(By.xpath("//*[@id='basicBootstrapForm']/div[5]/div/label[1]/input"));
-        }else if (sexo == "feminino"){
+        }else if (sexo.equals("feminino")){
             dsl.radioClick(By.xpath("//*[@id='basicBootstrapForm']/div[5]/div/label[2]/input"));
         }
 
@@ -54,11 +54,11 @@ public class CenarioUmPage {
 
     public void setHobbies(String... hobbies){    //precisa de impletacao para caso de mais de 1 hobbie
         for(String hobbie:hobbies) {
-            if (hobbie == "cricket") {
+            if (hobbie.equals("cricket")) {
                 dsl.radioClick(By.id("checkbox1"));
-            } else if (hobbie == "movies") {
+            } else if (hobbie.equals("movies")) {
                 dsl.radioClick(By.id("checkbox2"));
-            } else if (hobbie == "hockey") {
+            } else if (hobbie.equals("hockey")) {
                 dsl.radioClick(By.id("checkbox3"));
             }
         }
