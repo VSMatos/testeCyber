@@ -2,7 +2,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import testes.FrameTest;
 import testes.CenarioQuatro;
-import testes.CenarioTres;
+import testes.DatePickerTest;
 import testes.RegisterTest;
 
 @RunWith(Suite.class)
@@ -10,7 +10,7 @@ import testes.RegisterTest;
 @Suite.SuiteClasses({
         RegisterTest.class,
         FrameTest.class,
-        CenarioTres.class,
+        DatePickerTest.class,
         CenarioQuatro.class,
 })
 

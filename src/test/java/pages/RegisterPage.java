@@ -36,14 +36,14 @@ public class RegisterPage extends BasePage {
         dsl.write(By.xpath("//*[@id='eid']/input"),email);
     }
 
-    public void setTel(String telefone){
-        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(4) > div > input"),telefone);
+    public void setTel(String tel){
+        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(4) > div > input"),tel);
     }
 
-    public void setGender(String sexo){
-        if (sexo.equals("masculino")) {
+    public void setGender(String sex){
+        if (sex.equals("masculino")) {
             dsl.radioClick(By.xpath("//*[@id='basicBootstrapForm']/div[5]/div/label[1]/input"));
-        }else if (sexo.equals("feminino")){
+        }else if (sex.equals("feminino")){
             dsl.radioClick(By.xpath("//*[@id='basicBootstrapForm']/div[5]/div/label[2]/input"));
         }
 
@@ -67,6 +67,10 @@ public class RegisterPage extends BasePage {
             dsl.click(By.id("msdd"));
             dsl.findAndClickByLinkText(language);
         }
+    }
+
+    public void clickDebug(){
+        dsl.click(By.xpath("//*[@id='basicBootstrapForm']/div[1]/div[1]/input"));
     }
 
     //skills direto na dsl

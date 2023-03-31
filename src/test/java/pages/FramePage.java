@@ -1,12 +1,11 @@
 package pages;
-
-import core.DSL;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class FramePage extends BasePage {
-
+    public void openURL(){
+        dsl.getURL("https://demo.automationtesting.in/Frames.html");
+    }
     public void switchToIframe(String iframe){
         dsl.switchToFrame(iframe);
     }

@@ -4,14 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import static core.DriverFactory.initDriver;
 
 
 public class DSL {
-    private WebDriver driver;
-
-    public DSL(WebDriver driver){
-        this.driver = driver;
-    }
+    private WebDriver driver = initDriver();
 
     public void getURL(String url){
         driver.get(url);

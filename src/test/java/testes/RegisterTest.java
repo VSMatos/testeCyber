@@ -36,6 +36,7 @@ public class RegisterTest {
         page.setHobbies("cricket", "movies");
 
         page.setLanguages("Portuguese", "English", "Spanish");
+
         page.setSkills("Javascript");
         page.setCountry("United States of America");
 
@@ -43,7 +44,6 @@ public class RegisterTest {
         page.setDay("29");
         page.setMonth("March");
         page.setYear("1992");
-
         page.setPassword("firstpassword", "Abc123");
         page.setPassword("secondpassword", "Abc123");
         page.submit();
