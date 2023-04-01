@@ -12,7 +12,7 @@ public class FramePage extends BasePage {
     public void switchToIframe(int iframe){
         dsl.switchToFrame(iframe);
     }
-    public void switchToSecondIframe(){
+    public void switchToFirstIframe(){
         dsl.switchToFrame(dsl.findElement(By.xpath("//*[@id='Multiple']/iframe")));
     }
     public void writeInFrame(String texto){
@@ -20,6 +20,10 @@ public class FramePage extends BasePage {
     }
     public void openSecondCase(){
         dsl.click(By.xpath("//a[starts-with(@href, '#M')]"));
+    }
+
+    public String valueOfTextFieldInFrames(){
+        return dsl.getTextFieldValue(By.tagName("input"));
     }
 
 }

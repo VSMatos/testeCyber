@@ -1,6 +1,7 @@
 package testes;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import pages.DatePickerPage;
@@ -22,6 +23,7 @@ public class DatePickerTest {
     public void datePickerAtt() {
         page.openURL();
         page.writeInDatePicker("03/29/1992");
+        Assert.assertEquals("03/29/1992",page.getDate());
     }
 
     @Test
@@ -29,6 +31,7 @@ public class DatePickerTest {
         page.openURL();
         page.openDisabledDatePicker();
         page.setDateInDisabledDatePicker("29", "03", "1992");
+        Assert.assertEquals("03/29/1992",page.getDisabledDate());
     }
 
 }
