@@ -30,7 +30,7 @@ public class RegisterTest {
         page.setSecondName(); // default "SecondName"
         page.setAdress("Rua da rua, Bairro: Centro - Cidade - Brasil");
         page.setEmail("email@email");
-        page.setTel("1234567890");
+        page.setTel(); //default cria 10int aleatorios de 0a 9
         page.setGender("masculino"); // masculino ou feminino
 
         page.setHobbies("cricket", "movies");

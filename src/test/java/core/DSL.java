@@ -17,8 +17,6 @@ public class DSL {
         driver.findElement(by).sendKeys(text);
     }
 
-
-
     public void click(By by){
         driver.findElement(by).click();
     }
@@ -29,16 +27,12 @@ public class DSL {
     public void findAndSelectByVisibleText(By by, String texto){
         new Select(driver.findElement(by)).selectByVisibleText(texto);
     }
-
     public void radioClick(By by){
         driver.findElement(by).click();
     }
-
-
     public void findInListAndClick(By by, By el){
         driver.findElement(by).findElement(el).click();
     }
-
     public void switchToFrame(WebElement webElement) {
         driver.switchTo().frame(webElement);
     }
@@ -59,6 +53,9 @@ public class DSL {
     }
     public String getTextFieldValue(By by){
         return driver.findElement(by).getAttribute("value");
+    }
+    public String getTextAtributteStyle(By by){
+        return driver.findElement(by).getAttribute("style");
     }
 
 

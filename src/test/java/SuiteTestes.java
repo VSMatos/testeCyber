@@ -1,7 +1,7 @@
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import testes.FrameTest;
-import testes.CenarioQuatro;
+import testes.SliderTest;
 import testes.DatePickerTest;
 import testes.RegisterTest;
 
@@ -11,7 +11,7 @@ import testes.RegisterTest;
         RegisterTest.class,
         FrameTest.class,
         DatePickerTest.class,
-        CenarioQuatro.class,
+        SliderTest.class,
 })
 
 public class SuiteTestes {

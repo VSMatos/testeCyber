@@ -1,5 +1,6 @@
 package pages;
 import org.openqa.selenium.By;
+import java.util.Random;
 
 
 
@@ -38,6 +39,13 @@ public class RegisterPage extends BasePage {
 
     public void setTel(String tel){
         dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(4) > div > input"),tel);
+    }
+    public void setTel(){
+        Random random = new Random();
+        Integer num = random.nextInt(1000000000);
+        Integer num2 = random.nextInt(100);
+
+        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(4) > div > input"),(num.toString() + num2.toString()));
     }
 
     public void setGender(String sex){
