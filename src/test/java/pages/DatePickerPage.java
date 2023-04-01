@@ -1,5 +1,6 @@
 package pages;
 
+import core.BasePage;
 import org.openqa.selenium.By;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

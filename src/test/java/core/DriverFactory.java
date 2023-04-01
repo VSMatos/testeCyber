@@ -7,15 +7,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverFactory {
 
-    static WebDriver driver;
+    private static WebDriver driver;
+    private DriverFactory(){}
 
     public static WebDriver initDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().setSize(new Dimension(1381, 742));
-        //driver.manage().window().maximize();
-
+        if(driver == null){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().setSize(new Dimension(1381, 742));
+            //driver.manage().window().maximize();
+        }
         return driver;
     }
+
+    public static void killDriver(){
+        if (driver != null){
+            //driver.quit();
+            driver.close();
+            driver = null;
+        }
+    }
+
 
 }

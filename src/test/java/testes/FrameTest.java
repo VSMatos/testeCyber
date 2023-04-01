@@ -1,23 +1,20 @@
 package testes;
 
-import org.junit.After;
+import core.BaseTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import pages.FramePage;
 
-public class FrameTest {
+import static core.DriverFactory.killDriver;
+
+public class FrameTest extends BaseTest {
         private FramePage page;
 
         @Before
         public void setupAll() {
             page = new FramePage();
             page.openURL();
-        }
-
-        @After
-        public void fecharNavegador() {
-            //driver.quit();
         }
 
         @Test

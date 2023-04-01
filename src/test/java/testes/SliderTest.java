@@ -1,13 +1,15 @@
 package testes;
 
-import org.junit.After;
+import core.BaseTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import pages.SliderPage;
 
-public class SliderTest {
+import static core.DriverFactory.killDriver;
+
+public class SliderTest extends BaseTest {
     private SliderPage page;
 
     @Before
@@ -16,10 +18,6 @@ public class SliderTest {
         page.openURL();
     }
 
-    @After
-    public void fecharNavegador() {
-        //driver.quit();
-    }
 
     @Test
     public void SliderTestAtt() {

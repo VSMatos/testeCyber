@@ -1,22 +1,19 @@
 package testes;
 
-import org.junit.After;
+import core.BaseTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import pages.DatePickerPage;
 
-public class DatePickerTest {
+import static core.DriverFactory.killDriver;
+
+public class DatePickerTest extends BaseTest {
     private DatePickerPage page;
 
     @Before
     public void setupAll() {
         page = new DatePickerPage();
-    }
-
-    @After
-    public void fecharNavegador() {
-        //driver.quit();
     }
 
     @Test

@@ -1,5 +1,4 @@
-package pages;
-
+package core;
 import core.DSL;
 
 public class BasePage {

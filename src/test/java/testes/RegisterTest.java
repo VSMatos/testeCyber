@@ -1,12 +1,13 @@
 package testes;
 
-import org.junit.After;
+import core.BaseTest;
 import org.junit.Before;
 import org.junit.Test;
 import pages.RegisterPage;
 
 
-public class RegisterTest {
+
+public class RegisterTest extends BaseTest {
 
 
     private RegisterPage page;
@@ -17,11 +18,6 @@ public class RegisterTest {
         page.openURL();
     }
 
-
-    @After
-    public void fecharNavegador() {
-        //driver.quit();
-    }
 
 
     @Test
