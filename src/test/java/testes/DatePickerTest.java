@@ -15,7 +15,7 @@ public class DatePickerTest extends BaseTest {
     }
 
     @Test
-    public void datePickerAtt() {
+    public void datePicker() {
         page.openURL();
         page.writeInDatePicker("03/29/1992");
         Assert.assertEquals("03/29/1992",page.getDate());

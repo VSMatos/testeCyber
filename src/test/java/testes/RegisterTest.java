@@ -16,11 +16,11 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
-    public void testePageAtualizado() {
+    public void registerTest() {
         page.setName();
         page.setSecondName();
         page.setAdress("Rua da rua, Bairro: Centro - Cidade - Brasil");
-        page.setEmail("email@email");
+        page.setEmail();
         page.setTel();
         page.setGender("masculino");
         page.setHobbies("cricket", "movies");

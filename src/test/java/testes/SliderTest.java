@@ -16,7 +16,7 @@ public class SliderTest extends BaseTest {
     }
 
     @Test
-    public void SliderTestAtt() {
+    public void SliderTest() {
         page.slideSlider(50);
         Assert.assertEquals("left: 50%;",page.slideAttribute());
     }

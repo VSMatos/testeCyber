@@ -12,31 +12,46 @@ public class RegisterPage extends BasePage {
     }
 
     public void setName(){
-        dsl.write(By.xpath("//*[@id='basicBootstrapForm']/div[1]/div[1]/input"),"Name");
+        dsl.write(By.xpath("//input[@placeholder='First Name']"),"Name");
     }
 
     public void setName(String name){
-        dsl.write(By.xpath("//*[@id='basicBootstrapForm']/div[1]/div[1]/input"),name);
+        dsl.write(By.xpath("//input[@placeholder='First Name']"),name);
     }
 
     public void setSecondName(){
-        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(1) > div:nth-child(3) > input"),"SecondName");
+        dsl.write(By.xpath("//input[@placeholder='Last Name']"),"SecondName");
     }
 
     public void setSecondName(String secondName){
-        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(1) > div:nth-child(3) > input"),secondName);
+        dsl.write(By.xpath("//input[@placeholder='Last Name']"),secondName);
     }
 
     public void setAdress(String adress){
-        dsl.write(By.xpath("/html/body/section/div/div/div[2]/form/div[2]/div/textarea"),adress);
+        dsl.write(By.xpath("//textarea"),adress);
     }
 
+    protected String generateRandomEmailAdress() {
+        String chars = "abcdefghijklmnopqrstuvywxz1234567890";
+        StringBuilder randomString = new StringBuilder();
+        Random rnd = new Random();
+        while (randomString.length() < 10) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * chars.length());
+            randomString.append(chars.charAt(index));
+        }
+        String randomStr = randomString.toString();
+        return randomStr;
+
+    }
+    public void setEmail(){
+        dsl.write(By.xpath("//input[@type='email']"),generateRandomEmailAdress()+"@yourprovider.com");
+    }
     public void setEmail(String email){
-        dsl.write(By.xpath("//*[@id='eid']/input"),email);
+        dsl.write(By.xpath("//input[@type='email']"),email);
     }
 
     public void setTel(String tel){
-        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(4) > div > input"),tel);
+        dsl.write(By.xpath("//input[@type='tel']"),tel);
     }
 
     public void setTel(){
@@ -46,28 +61,24 @@ public class RegisterPage extends BasePage {
         for(int i =0; i<tel.length; i++){
             tel[i] = random.nextInt(10);
         }
-
-        dsl.write(By.cssSelector("#basicBootstrapForm > div:nth-child(4) > div > input"), Arrays.toString(tel).replaceAll("\\[|\\]|,|\\s", ""));
+        dsl.write(By.xpath("//input[@type='tel']"), Arrays.toString(tel).replaceAll("\\[|\\]|,|\\s", ""));
     }
 
     public void setGender(String sex){
         if (sex.equals("masculino")) {
-            dsl.radioClick(By.xpath("//*[@id='basicBootstrapForm']/div[5]/div/label[1]/input"));
+            dsl.radioClick(By.xpath("//input[@value='Male']"));
         }else if (sex.equals("feminino")){
-            dsl.radioClick(By.xpath("//*[@id='basicBootstrapForm']/div[5]/div/label[2]/input"));
+            dsl.radioClick(By.xpath("//input[@value='FeMale']"));
         }
-
         // dsl.radioClick(By.xpath(String.format("//input[@value=%s]",sexo)));
     }
 
     public void setHobbies(String... hobbies){
         for(String hobbie:hobbies) {
-            if (hobbie.equals("cricket")) {
-                dsl.radioClick(By.id("checkbox1"));
-            } else if (hobbie.equals("movies")) {
-                dsl.radioClick(By.id("checkbox2"));
-            } else if (hobbie.equals("hockey")) {
-                dsl.radioClick(By.id("checkbox3"));
+            switch (hobbie) {
+                case "cricket" -> dsl.radioClick(By.id("checkbox1"));
+                case "movies" -> dsl.radioClick(By.id("checkbox2"));
+                case "hockey" -> dsl.radioClick(By.id("checkbox3"));
             }
         }
     }
@@ -79,39 +90,31 @@ public class RegisterPage extends BasePage {
         }
     }
 
-    public void clickDebug(){
-        dsl.click(By.xpath("//*[@id='basicBootstrapForm']/div[1]/div[1]/input"));
-    }
-
-    //skills direto na dsl
     public void setSkills(String skill){
         dsl.findInListAndClick(By.id("Skills"),By.xpath("//option[. = '"+skill+"']"));
-
     }
 
     public void setCountry(String country){
         dsl.findAndSelectByVisibleText(By.id("country"),country);
-
     }
 
     public void setDay(String day){
         dsl.findAndSelectByVisibleText(By.id("daybox"),day);
     }
+
     public void setMonth(String month){
-        dsl.findAndSelectByVisibleText(By.xpath("//*[@id='basicBootstrapForm']/div[11]/div[2]/select"),month);
+        dsl.findAndSelectByVisibleText(By.xpath("//select[@placeholder='Month']"),month);
     }
+
     public void setYear(String year){
         dsl.findAndSelectByVisibleText(By.id("yearbox"),year);
     }
 
     public void setPassword(String fieldId, String password){
         dsl.write(By.id(fieldId),password);
-
     }
 
     public void submit(){
         dsl.click(By.id("submitbtn"));
     }
-
-
 }
