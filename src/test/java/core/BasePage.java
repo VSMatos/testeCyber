@@ -1,5 +1,4 @@
 package core;
-import core.DSL;
 
 public class BasePage {
     protected DSL dsl;
@@ -7,5 +6,4 @@ public class BasePage {
     public BasePage() {
         dsl = new DSL();
     }
-
 }

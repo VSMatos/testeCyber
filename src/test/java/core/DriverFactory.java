@@ -15,18 +15,14 @@ public class DriverFactory {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().setSize(new Dimension(1381, 742));
-            //driver.manage().window().maximize();
         }
         return driver;
     }
 
     public static void killDriver(){
-        if (driver != null){
-            //driver.quit();
+        if (driver != null && Properties.CLOSE_BROWSER){
             driver.close();
             driver = null;
         }
     }
-
-
 }

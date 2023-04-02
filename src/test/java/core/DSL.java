@@ -11,7 +11,7 @@ public class DSL {
     private WebDriver driver = initDriver();
 
     public void getURL(String url){
-        driver.get(url);
+        driver.get(Properties.baseURL + url);
     }
     public void write(By by, String text){
         driver.findElement(by).sendKeys(text);

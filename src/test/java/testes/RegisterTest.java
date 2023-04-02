@@ -5,10 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import pages.RegisterPage;
 
-
-
 public class RegisterTest extends BaseTest {
-
 
     private RegisterPage page;
 
@@ -18,25 +15,18 @@ public class RegisterTest extends BaseTest {
         page.openURL();
     }
 
-
-
     @Test
     public void testePageAtualizado() {
-        page.setName(); //default "Name"
-        page.setSecondName(); // default "SecondName"
+        page.setName();
+        page.setSecondName();
         page.setAdress("Rua da rua, Bairro: Centro - Cidade - Brasil");
         page.setEmail("email@email");
-        page.setTel(); //default cria 10int aleatorios de 0a 9
-        page.setGender("masculino"); // masculino ou feminino
-
+        page.setTel();
+        page.setGender("masculino");
         page.setHobbies("cricket", "movies");
-
         page.setLanguages("Portuguese", "English", "Spanish");
-
         page.setSkills("Javascript");
         page.setCountry("United States of America");
-
-        //datas
         page.setDay("29");
         page.setMonth("March");
         page.setYear("1992");

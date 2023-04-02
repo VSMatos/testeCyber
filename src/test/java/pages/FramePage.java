@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class FramePage extends BasePage {
     public void openURL(){
-        dsl.getURL("https://demo.automationtesting.in/Frames.html");
+        dsl.getURL("Frames.html");
     }
     public void switchToIframe(String iframe){
         dsl.switchToFrame(iframe);

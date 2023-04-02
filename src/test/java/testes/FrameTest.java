@@ -6,8 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import pages.FramePage;
 
-import static core.DriverFactory.killDriver;
-
 public class FrameTest extends BaseTest {
         private FramePage page;
 
@@ -27,15 +25,9 @@ public class FrameTest extends BaseTest {
         public void writeIframeInIframe(){
             page.openSecondCase();
             page.switchToFirstIframe();
-
-            //int size = driver.findElements(By.tagName("iframe")).size();
-            //System.out.println("Total Frames --" + size);
-
             page.switchToIframe(0);
             page.writeInFrame("Teste de texto em Iframes aninhados");
             Assert.assertEquals("Teste de texto em Iframes aninhados",page.valueOfTextFieldInFrames());
-
-
     }
 
 }

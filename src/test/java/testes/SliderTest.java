@@ -4,10 +4,7 @@ import core.BaseTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import pages.SliderPage;
-
-import static core.DriverFactory.killDriver;
 
 public class SliderTest extends BaseTest {
     private SliderPage page;
@@ -17,7 +14,6 @@ public class SliderTest extends BaseTest {
         page = new SliderPage();
         page.openURL();
     }
-
 
     @Test
     public void SliderTestAtt() {

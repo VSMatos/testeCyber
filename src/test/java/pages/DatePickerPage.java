@@ -5,13 +5,11 @@ import org.openqa.selenium.By;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-
 public class DatePickerPage extends BasePage {
 
     public void openURL(){
-        dsl.getURL("https://demo.automationtesting.in/Datepicker.html");
+        dsl.getURL("Datepicker.html");
     }
-
 
     public void writeInDatePicker(String mesanodia){
         dsl.write(By.id("datepicker2"),mesanodia);

@@ -6,8 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import pages.DatePickerPage;
 
-import static core.DriverFactory.killDriver;
-
 public class DatePickerTest extends BaseTest {
     private DatePickerPage page;
 
@@ -30,5 +28,4 @@ public class DatePickerTest extends BaseTest {
         page.setDateInDisabledDatePicker("29", "03", "1992");
         Assert.assertEquals("03/29/1992",page.getDisabledDate());
     }
-
 }
