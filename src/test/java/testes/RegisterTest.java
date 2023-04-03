@@ -1,6 +1,7 @@
 package testes;
 
 import core.BaseTest;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import pages.RegisterPage;
@@ -32,6 +33,8 @@ public class RegisterTest extends BaseTest {
         page.setYear("1992");
         page.setPassword("firstpassword", "Abc123");
         page.setPassword("secondpassword", "Abc123");
+        page.attachFile();
+        Assert.assertTrue(page.attachAtributte().contains("testeimg.jpg"));
         page.submit();
         //impossivel validar devido a compo pais que esta quebrado;
     }

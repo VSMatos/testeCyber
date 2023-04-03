@@ -2,6 +2,8 @@ package pages;
 
 import core.BasePage;
 import org.openqa.selenium.By;
+
+import java.io.File;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -29,7 +31,10 @@ public class RegisterPage extends BasePage {
 
     private By inputYear = By.id("yearbox");
 
+    private By attachFile = By.xpath("//input[@id='imagesrc']");
+
     private By submitButton = By.id("submitbtn");
+
     public void openURL(){
         dsl.getURL("Register.html");
     }
@@ -135,6 +140,15 @@ public class RegisterPage extends BasePage {
 
     public void setPassword(String fieldId, String password){
         dsl.write(By.id(fieldId),password);
+    }
+
+    public void attachFile(){
+        dsl.write(attachFile,"C:"+ File.separator + "Users"+ File.separator +"vitor"+ File.separator + "IdeaProjects"+ File.separator +"projetoTesteCyber"+ File.separator +"testeCyber"+ File.separator +"target"+ File.separator +"screenshot"+ File.separator +"testeimg.jpg");
+    }
+
+    public String attachAtributte(){
+        System.out.println(dsl.getTextFieldValue(attachFile));
+        return dsl.getTextFieldValue(attachFile);
     }
 
     public void submit(){
