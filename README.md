@@ -49,7 +49,7 @@
 :memo: Implementar inserção de senha randomica seguindo os padrões requisitados pelo campo.
 
 
-## Desenvolvedor/Candidato :octocat:
+## Desenvolvedor/Candidato
 
 
 
