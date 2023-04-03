@@ -36,6 +36,7 @@ public class RegisterTest extends BaseTest {
         page.attachFile();
         Assert.assertTrue(page.attachAtributte().contains("testeimg.jpg"));
         page.submit();
-        //impossivel validar devido a compo pais que esta quebrado;
+        Assert.assertEquals("Cadastro OK!", "");
+        //impossivel validar devido o campo pais que estar com bug;
     }
 }

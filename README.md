@@ -15,9 +15,6 @@
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
 
-... 
-
-
 ## Descrição do projeto 
 
 <p align="justify">
@@ -40,8 +37,6 @@
 
 :warning: [Java](https://www.java.com/pt-BR/download/)
 :warning: [Selenium WebDriver](https://www.selenium.dev/downloads/)
-
-...
 
 
 ## Tarefas em aberto

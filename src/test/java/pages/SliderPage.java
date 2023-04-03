@@ -12,10 +12,10 @@ public class SliderPage extends BasePage {
 
     }
 
-    public void slideSlider(int porcetagem){
+    public void slideSlider(int percent){
         WebElement slider = dsl.findElement(By.cssSelector("#slider > a"));
 
-        for (int i = 1; i <= porcetagem ; i++) {
+        for (int i = 1; i <= percent ; i++) {
             slider.sendKeys(Keys.ARROW_RIGHT);
         }
     }

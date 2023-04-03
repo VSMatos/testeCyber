@@ -11,8 +11,8 @@ public class DatePickerPage extends BasePage {
         dsl.getURL("Datepicker.html");
     }
 
-    public void writeInDatePicker(String mesanodia){
-        dsl.write(By.id("datepicker2"),mesanodia);
+    public void writeInDatePicker(String monthyearday){
+        dsl.write(By.id("datepicker2"),monthyearday);
     }
 
     public void openDisabledDatePicker(){

@@ -98,7 +98,6 @@ public class RegisterPage extends BasePage {
         }else if (sex.equals("feminino")){
             dsl.radioClick(By.xpath("//input[@value='FeMale']"));
         }
-        // dsl.radioClick(By.xpath(String.format("//input[@value=%s]",sexo)));
     }
 
     public void setHobbies(String... hobbies){
@@ -147,7 +146,6 @@ public class RegisterPage extends BasePage {
     }
 
     public String attachAtributte(){
-        System.out.println(dsl.getTextFieldValue(attachFile));
         return dsl.getTextFieldValue(attachFile);
     }
 
