@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverFactory {
 
     private static WebDriver driver;
+
     private DriverFactory(){}
 
     public static WebDriver initDriver(){
@@ -25,4 +26,5 @@ public class DriverFactory {
             driver = null;
         }
     }
+
 }

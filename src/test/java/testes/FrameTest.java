@@ -7,6 +7,7 @@ import org.junit.Test;
 import pages.FramePage;
 
 public class FrameTest extends BaseTest {
+
         private FramePage page;
 
         @Before
@@ -21,6 +22,7 @@ public class FrameTest extends BaseTest {
             page.writeInFrame("Teste de texto no frame um!");
             Assert.assertEquals("Teste de texto no frame um!",page.valueOfTextFieldInFrames());
         }
+
         @Test
         public void writeIframeInIframe(){
             page.openSecondCase();

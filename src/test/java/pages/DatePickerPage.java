@@ -35,9 +35,11 @@ public class DatePickerPage extends BasePage {
         dsl.click(By.xpath("//a[text()="+dd+"]"));
 
     }
+
     public String getDate(){
         return dsl.getTextFieldValue(By.xpath("//*[@id='datepicker2']"));
     }
+
     public String getDisabledDate(){
         return dsl.getTextFieldValue(By.xpath("//*[@id='datepicker1']"));
     }
