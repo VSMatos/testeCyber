@@ -15,6 +15,7 @@ public class BaseTest {
 
     @Rule
     public TestName testName = new TestName();
+
     @After
     public void closeBrowser() throws IOException {
         TakesScreenshot ss = (TakesScreenshot) initDriver();
@@ -23,4 +24,5 @@ public class BaseTest {
 
         killDriver();
     }
+
 }

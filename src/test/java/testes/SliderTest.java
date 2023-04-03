@@ -7,6 +7,7 @@ import org.junit.Test;
 import pages.SliderPage;
 
 public class SliderTest extends BaseTest {
+
     private SliderPage page;
 
     @Before

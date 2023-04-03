@@ -63,17 +63,17 @@ public class RegisterPage extends BasePage {
         String chars = "abcdefghijklmnopqrstuvywxz1234567890";
         StringBuilder randomString = new StringBuilder();
         Random rnd = new Random();
-        while (randomString.length() < 10) { // length of the random string.
+        while (randomString.length() < 10) {
             int index = (int) (rnd.nextFloat() * chars.length());
             randomString.append(chars.charAt(index));
         }
-        String randomStr = randomString.toString();
-        return randomStr;
-
+        return randomString.toString();
     }
+
     public void setEmail(){
         dsl.write(inputEmail,generateRandomEmailAdress()+"@yourprovider.com");
     }
+
     public void setEmail(String email){
         dsl.write(inputEmail,email);
     }

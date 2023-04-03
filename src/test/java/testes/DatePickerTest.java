@@ -7,6 +7,7 @@ import org.junit.Test;
 import pages.DatePickerPage;
 
 public class DatePickerTest extends BaseTest {
+
     private DatePickerPage page;
 
     @Before
