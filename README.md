@@ -20,22 +20,26 @@
 <p align="justify">
   Desafio de automação de testes em Selenium WebDriver + Java 
 </p>
-<p align="justify">Nesse projeto foi implementada uma pasta "core" onde a ideia é implementar o reuso e centralizar as chamadas e funcionalidades do projeto.<p>
-<p align="justify"><a href="">DRIVEFACTORY</a> - Classe utilizada para inicialização e finalição das instancias do driver.<p>
-<p align="justify"><a href="">PROPERTIES</a> - Classe utilizada para setar propriedades "globais" para o projeto.<p>
-<p align="justify"><a href="">DSL</a> - Utilizada para abstração e reuso dos métodos provindos do driver.<p>
-<p align="justify"><a href="">BASETEST</a>- Utilizado para setar paramentros como fechamento do driver e criação das evidencias (Screenshots)<p>
-<p align="justify"><a href="">BASEPAGE</a> - Utilizada para instanciar a DSL em todas as Pages necessárias.<p>
+<li align="justify">Nesse projeto utiliza um "core", onde a ideia foi de implementar o reuso e centralizar as chamadas e funcionalidades do projeto.<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/DriverFactory.java">DRIVEFACTORY</a> - Classe utilizada para inicialização e finalização das instâncias do driver.<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/Properties.java">PROPERTIES</a> - Classe utilizada para "setar" propriedades globais para o projeto.<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/DSL.java">DSL</a> - Utilizada para abstração e reuso dos métodos provindos do driver.<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/BaseTest.java">BASETEST</a>- Utilizado para "setar" parâmetros como, por exemplo, fechamento do driver e criação das evidencias (Screenshots)<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/BasePage.java">BASEPAGE</a> - Utilizada para instanciar a DSL em todas as Pages necessárias.<p>
+
+
+<li>Criado um <a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/SuiteTestes.java">Suite de Testes</a> para execução de toda bateria de testes de maneira mais simples e rápida.
+
 
 ## Funcionalidades
 
-:heavy_check_mark: Automação do preenchimento do formulário - Register.html ><a href=""> Test </a>><a href=""> Page</a>
+:heavy_check_mark: Automação do preenchimento do formulário - Register.html :<a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/testes/RegisterTest.java"> Test </a>><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/pages/RegisterPage.java"> Page</a>
 
-:heavy_check_mark: Navegação entre Iframes e preenchimento de input - Frames.html ><a href=""> Test </a>><a href=""> Page</a>
+:heavy_check_mark: Navegação entre Iframes e preenchimento de input - Frames.html :<a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/testes/FrameTest.java"> Test </a>><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/pages/FramePage.java"> Page</a>
 
-:heavy_check_mark: Inserção e validação de datas nos respectivos campos - Datepicker.html ><a href=""> Test </a>><a href=""> Page</a>
+:heavy_check_mark: Inserção e validação de datas nos respectivos campos - Datepicker.html :<a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/testes/DatePickerTest.java"> Test </a>><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/pages/DatePickerPage.java"> Page</a>
 
-:heavy_check_mark: Movimentação da barra de slide - Slider.html ><a href=""> Test </a>><a href=""> Page</a>
+:heavy_check_mark: Movimentação da barra de slide - Slider.html :<a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/testes/SliderTest.java"> Test </a>><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/pages/SliderPage.java"> Page</a>
 
 
 
