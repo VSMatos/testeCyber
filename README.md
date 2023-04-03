@@ -20,11 +20,11 @@
 <p align="justify">
   Desafio de automação de testes em Selenium WebDriver + Java 
 </p>
-<li align="justify">Nesse projeto foi implementada uma pasta "core" onde a ideia é implementar o reuso e centralizar as chamadas e funcionalidades do projeto.<p>
-<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/DriverFactory.java">DRIVEFACTORY</a> - Classe utilizada para inicialização e finalição das instancias do driver.<p>
-<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/Properties.java">PROPERTIES</a> - Classe utilizada para setar propriedades "globais" para o projeto.<p>
+<li align="justify">Nesse projeto utiliza um "core", onde a ideia foi de implementar o reuso e centralizar as chamadas e funcionalidades do projeto.<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/DriverFactory.java">DRIVEFACTORY</a> - Classe utilizada para inicialização e finalização das instâncias do driver.<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/Properties.java">PROPERTIES</a> - Classe utilizada para "setar" propriedades globais para o projeto.<p>
 <p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/DSL.java">DSL</a> - Utilizada para abstração e reuso dos métodos provindos do driver.<p>
-<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/BaseTest.java">BASETEST</a>- Utilizado para setar paramentros como fechamento do driver e criação das evidencias (Screenshots)<p>
+<p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/BaseTest.java">BASETEST</a>- Utilizado para "setar" parâmetros como, por exemplo, fechamento do driver e criação das evidencias (Screenshots)<p>
 <p align="justify"><a href="https://github.com/VSMatos/testeCyber/blob/main/src/test/java/core/BasePage.java">BASEPAGE</a> - Utilizada para instanciar a DSL em todas as Pages necessárias.<p>
 
 
