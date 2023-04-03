@@ -20,22 +20,28 @@
 <p align="justify">
   Desafio de automação de testes em Selenium WebDriver + Java 
 </p>
+<p align="justify">Nesse projeto foi implementada uma pasta "core" onde a ideia é implementar o reuso e centralizar as chamadas e funcionalidades do projeto.<p>
+<p align="justify"><a href="">DRIVEFACTORY</a> - Classe utilizada para inicialização e finalição das instancias do driver.<p>
+<p align="justify"><a href="">PROPERTIES</a> - Classe utilizada para setar propriedades "globais" para o projeto.<p>
+<p align="justify"><a href="">DSL</a> - Utilizada para abstração e reuso dos métodos provindos do driver.<p>
+<p align="justify"><a href="">BASETEST</a>- Utilizado para setar paramentros como fechamento do driver e criação das evidencias (Screenshots)<p>
+<p align="justify"><a href="">BASEPAGE</a> - Utilizada para instanciar a DSL em todas as Pages necessárias.<p>
 
 ## Funcionalidades
 
-:heavy_check_mark: Automação do preenchimento do formulário - Register.html 
+:heavy_check_mark: Automação do preenchimento do formulário - Register.html ><a href=""> Test </a>><a href=""> Page</a>
 
-:heavy_check_mark: Navegação entre Iframes e preenchimento de input - Frames.html
+:heavy_check_mark: Navegação entre Iframes e preenchimento de input - Frames.html ><a href=""> Test </a>><a href=""> Page</a>
 
-:heavy_check_mark: Inserção e validação de datas nos respectivos campos - Datepicker.html
+:heavy_check_mark: Inserção e validação de datas nos respectivos campos - Datepicker.html ><a href=""> Test </a>><a href=""> Page</a>
 
-:heavy_check_mark: Movimentação da barra de slide - Slider.html 
+:heavy_check_mark: Movimentação da barra de slide - Slider.html ><a href=""> Test </a>><a href=""> Page</a>
 
 
 
 ## Pré-requisitos
 
-:warning: [Java](https://www.java.com/pt-BR/download/)
+:warning: [Java](https://www.java.com/pt-BR/download/)<br>
 :warning: [Selenium WebDriver](https://www.selenium.dev/downloads/)
 
 
