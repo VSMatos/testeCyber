@@ -7,28 +7,51 @@ import java.util.Random;
 
 public class RegisterPage extends BasePage {
 
+    private By inputName = By.xpath("//input[@placeholder='First Name']");
+
+    private By inputLastName = By.xpath("//input[@placeholder='Last Name']");
+
+    private By inputAdress = By.xpath("//textarea");
+
+    private By inputEmail = By.xpath("//input[@type='email']");
+
+    private By inputTel = By.xpath("//input[@type='tel']");
+
+    private By languageField = By.id("msdd");
+
+    private By inputSkills = By.id("Skills");
+
+    private By inputCountry = By.id("country");
+
+    private By inputDay = By.id("daybox");
+
+    private By inputMonth = By.xpath("//select[@placeholder='Month']");
+
+    private By inputYear = By.id("yearbox");
+
+    private By submitButton = By.id("submitbtn");
     public void openURL(){
         dsl.getURL("Register.html");
     }
 
     public void setName(){
-        dsl.write(By.xpath("//input[@placeholder='First Name']"),"Name");
+        dsl.write(inputName,"Name");
     }
 
     public void setName(String name){
-        dsl.write(By.xpath("//input[@placeholder='First Name']"),name);
+        dsl.write(inputName,name);
     }
 
     public void setSecondName(){
-        dsl.write(By.xpath("//input[@placeholder='Last Name']"),"SecondName");
+        dsl.write(inputLastName,"SecondName");
     }
 
     public void setSecondName(String secondName){
-        dsl.write(By.xpath("//input[@placeholder='Last Name']"),secondName);
+        dsl.write(inputLastName,secondName);
     }
 
     public void setAdress(String adress){
-        dsl.write(By.xpath("//textarea"),adress);
+        dsl.write(inputAdress,adress);
     }
 
     protected String generateRandomEmailAdress() {
@@ -44,14 +67,14 @@ public class RegisterPage extends BasePage {
 
     }
     public void setEmail(){
-        dsl.write(By.xpath("//input[@type='email']"),generateRandomEmailAdress()+"@yourprovider.com");
+        dsl.write(inputEmail,generateRandomEmailAdress()+"@yourprovider.com");
     }
     public void setEmail(String email){
-        dsl.write(By.xpath("//input[@type='email']"),email);
+        dsl.write(inputEmail,email);
     }
 
     public void setTel(String tel){
-        dsl.write(By.xpath("//input[@type='tel']"),tel);
+        dsl.write(inputTel,tel);
     }
 
     public void setTel(){
@@ -61,7 +84,7 @@ public class RegisterPage extends BasePage {
         for(int i =0; i<tel.length; i++){
             tel[i] = random.nextInt(10);
         }
-        dsl.write(By.xpath("//input[@type='tel']"), Arrays.toString(tel).replaceAll("\\[|\\]|,|\\s", ""));
+        dsl.write(inputTel, Arrays.toString(tel).replaceAll("\\[|\\]|,|\\s", ""));
     }
 
     public void setGender(String sex){
@@ -85,29 +108,29 @@ public class RegisterPage extends BasePage {
 
     public void setLanguages(String... languages){
         for (String language: languages) {
-            dsl.click(By.id("msdd"));
+            dsl.click(languageField);
             dsl.findAndClickByLinkText(language);
         }
     }
 
     public void setSkills(String skill){
-        dsl.findInListAndClick(By.id("Skills"),By.xpath("//option[. = '"+skill+"']"));
+        dsl.findInListAndClick(inputSkills,By.xpath("//option[. = '"+skill+"']"));
     }
 
     public void setCountry(String country){
-        dsl.findAndSelectByVisibleText(By.id("country"),country);
+        dsl.findAndSelectByVisibleText(inputCountry,country);
     }
 
     public void setDay(String day){
-        dsl.findAndSelectByVisibleText(By.id("daybox"),day);
+        dsl.findAndSelectByVisibleText(inputDay,day);
     }
 
     public void setMonth(String month){
-        dsl.findAndSelectByVisibleText(By.xpath("//select[@placeholder='Month']"),month);
+        dsl.findAndSelectByVisibleText(inputMonth,month);
     }
 
     public void setYear(String year){
-        dsl.findAndSelectByVisibleText(By.id("yearbox"),year);
+        dsl.findAndSelectByVisibleText(inputYear,year);
     }
 
     public void setPassword(String fieldId, String password){
@@ -115,6 +138,6 @@ public class RegisterPage extends BasePage {
     }
 
     public void submit(){
-        dsl.click(By.id("submitbtn"));
+        dsl.click(submitButton);
     }
 }
