@@ -13,7 +13,7 @@ public class RegisterPage extends BasePage {
 
     private By inputLastName = By.xpath("//input[@placeholder='Last Name']");
 
-    private By inputAdress = By.xpath("//textarea");
+    private By inputAddress = By.xpath("//textarea");
 
     private By inputEmail = By.xpath("//input[@type='email']");
 
@@ -55,11 +55,11 @@ public class RegisterPage extends BasePage {
         dsl.write(inputLastName,secondName);
     }
 
-    public void setAdress(String adress){
-        dsl.write(inputAdress,adress);
+    public void setAddress(String address){
+        dsl.write(inputAddress,address);
     }
 
-    protected String generateRandomEmailAdress() {
+    protected String generateRandomEmailAddress() {
         String chars = "abcdefghijklmnopqrstuvywxz1234567890";
         StringBuilder randomString = new StringBuilder();
         Random rnd = new Random();
@@ -71,7 +71,7 @@ public class RegisterPage extends BasePage {
     }
 
     public void setEmail(){
-        dsl.write(inputEmail,generateRandomEmailAdress()+"@yourprovider.com");
+        dsl.write(inputEmail, generateRandomEmailAddress()+"@yourprovider.com");
     }
 
     public void setEmail(String email){
@@ -145,7 +145,7 @@ public class RegisterPage extends BasePage {
         dsl.write(attachFile,"C:"+ File.separator + "Users"+ File.separator +"vitor"+ File.separator + "IdeaProjects"+ File.separator +"projetoTesteCyber"+ File.separator +"testeCyber"+ File.separator +"target"+ File.separator +"screenshot"+ File.separator +"testeimg.jpg");
     }
 
-    public String attachAtributte(){
+    public String attachAttribute(){
         return dsl.getTextFieldValue(attachFile);
     }
 

@@ -27,9 +27,9 @@ public class DatePickerPage extends BasePage {
         int currentMonth = Integer.parseInt(today.format(formatterMonth));
         int year = Integer.parseInt(yyyy);
         int month = Integer.parseInt(mm);
-        int difInMonths = ((currentYear - year) *12) + (currentMonth - month) -1;
+        int difInMonths = ((currentYear - year) *12) + (currentMonth - month);
 
-        for (int i =0 ; i <= difInMonths; i++){
+        for (int i =1 ; i <= difInMonths; i++){
             dsl.click(By.cssSelector("a[data-handler=prev]"));
         }
         dsl.click(By.xpath("//a[text()="+dd+"]"));

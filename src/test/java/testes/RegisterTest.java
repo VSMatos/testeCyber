@@ -20,7 +20,7 @@ public class RegisterTest extends BaseTest {
     public void registerTest() {
         page.setName();
         page.setSecondName();
-        page.setAdress("Rua da rua, Bairro: Centro - Cidade - Brasil");
+        page.setAddress("Rua da rua, Bairro: Centro - Cidade - Brasil");
         page.setEmail();
         page.setTel();
         page.setGender("masculino");
@@ -34,7 +34,7 @@ public class RegisterTest extends BaseTest {
         page.setPassword("firstpassword", "Abc123");
         page.setPassword("secondpassword", "Abc123");
         page.attachFile();
-        Assert.assertTrue(page.attachAtributte().contains("testeimg.jpg"));
+        Assert.assertTrue(page.attachAttribute().contains("testeimg.jpg"));
         page.submit();
         Assert.assertEquals("Cadastro OK!", "");
         //impossivel validar devido o campo pais que estar com bug;
